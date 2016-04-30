@@ -85,7 +85,6 @@ function widget:UnitIdle(unitID, unitDefID, unitTeam)
 		local ud = UnitDefs[udef]
 		if (ud["canReclaim"] and not ud.isFactory) then
 			  reclaimers[unitID]=true
-			  echo("Registering unit "..ud.name.." as idle")
 		end
 
 	end
