@@ -67,7 +67,7 @@ function widget:GameFrame()
 	if (ingameSecs>lastOrderGivenInSecs) then
 		for unitID in pairs(reclaimers) do
 			local x, y, z = getUnitPos(unitID)
-			states = getUnitStates(unitID)
+			local states = getUnitStates(unitID)
 			if (not isUnitSelected(unitID) and not states['cloak']) then
 				orderUnit(unitID, CMD.FIGHT, { x, y, z }, {})
 			end
